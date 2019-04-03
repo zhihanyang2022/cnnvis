@@ -31,6 +31,8 @@ vgg16_model = keras.applications.VGG16(weights='imagenet', include_top=True)
 visualizer = Visualizer(model=vgg16_model, model_input_shape=(1, 224, 224, 3) # (batch_size, height, width, num_channels)
 ```
 
+### 1-print-summary
+
 To **print the default summary** of the vgg16 network:
 ```python
 visualizer.model_summary(style='default')
@@ -75,7 +77,7 @@ Number of MaxPooling2D layers: 5
 Number of Dense layers: 3
 ```
 
-### plot-kernels
+### 2-plot-kernels
 To **plot kernels / filters**:
 ```python
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
@@ -87,7 +89,7 @@ To **obtain kernels / filters as a tensor** with dimension (index, height, width
 kernels = visualizer.get_kernels(layer_name, style='tensors')
 ```
 
-### plot-activations
+### 3-plot-activations
 To **plot activations / feature maps of a specific layer to a specific image**:
 ```python
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
