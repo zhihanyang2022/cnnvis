@@ -5,9 +5,8 @@
 Welcome to CNNVis! CNNVis is a high-level convolutional neural network (CNN) visualization API built on top of Keras. The intention behind this project aligns with the intention of Keras: "Being able to go from idea to result with the least possible daly is key to doing good research". 
 
 Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.models.Sequential` or `keras.models.Model` instance):
-* [sdssd](https://github.com/zhihanyang2022/cnnvis/blob/master/README.md#print-summary-1-print-summary)
-* Kernels / filters ([Do this in 2 lines of code](#2-plot-kernels))
-* Activations / feature maps of a specific layer to a specific image ([Do this in 3 lines of code](#3-plot-activations))
+* Kernels / filters ([Do this in 2 lines of code](#plot-kernels))
+* Activations / feature maps of a specific layer to a specific image ([Do this in 3 lines of code](#plot-activations))
 * The 2D pattern that maximally activates a kernel
 * Saliency maps
 * (Email yangz2@carleton.edu about anything you would like me to add!)
@@ -34,12 +33,12 @@ visualizer = Visualizer(model=vgg16_model, model_input_shape=(1, 224, 224, 3) # 
 
 ### Print Summary 
 
-To **print the default summary** of the vgg16 network:
+To print the **default summary** of the vgg16 network:
 ```python
 visualizer.model_summary(style='default')
 ```
 
-To **print the "cnn style" summary** (including the number of kernels, the size of kernels and the style of padding for each layer)  of the vgg16 network:
+To print the **"cnn style" summary** (including the number of kernels, the size of kernels and the style of padding for each layer)  of the vgg16 network:
 ```python
 visualizer.model_summary(style='cnn')
 ```
@@ -78,20 +77,20 @@ Number of MaxPooling2D layers: 5
 Number of Dense layers: 3
 ```
 
-### 2-plot-kernels
-To **plot kernels / filters**:
+### Plot Kernels
+To plot kernels / filters:
 ```python
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
 visualizer.get_kernels(layer_name, style='plots')
 ```
 
-To **obtain kernels / filters as a tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
+To obtain kernels / filters as a **tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
 ```python
 kernels = visualizer.get_kernels(layer_name, style='tensors')
 ```
 
-### 3-plot-activations
-To **plot activations / feature maps of a specific layer to a specific image**:
+### Plot Activations
+To plot activations / feature maps of a specific layer to a specific image:
 ```python
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
 img_path = '/Users/yangzhihan/datasets/cats_and_dogs_dataset/test/cats/1780.jpg'
@@ -99,7 +98,7 @@ visualizer.get_activations(layer_name, img_path, style='plots')
 ```
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/activations.png" alt="drawing" width="750"/>
 
-To **obtain activations / feature maps as a tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
+To obtain activations / feature maps as a **tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
 ```python
 visualizer.get_activations(layer_name, img_path, style='tensors')
 ```
