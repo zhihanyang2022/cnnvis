@@ -16,10 +16,11 @@ This library only supports a TensorFlow backend for Keras.
 
 ## Getting Started: 30 seconds to CNNVis
 
-First, import Keras:
-```
-import keras
-```
+First, make sure that all dependencies are installed:
+* Numpy
+* matplotlib
+* prettytable
+* Keras
 
 The `Visualizer` class is the only class defined in this library. 
 
@@ -61,14 +62,3 @@ To **obtain activations / feature maps as a tensor** with dimension (index, heig
 ```
 visualizer.get_activations(layer_name, img_path, style='tensors')
 ```
-
-
-
-
-
-
-## Dependencies of CNNVis
-* Numpy
-* matplotlib
-* prettytable
-* Keras
