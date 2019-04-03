@@ -6,5 +6,9 @@ Use CNNVis if you need to visualize the following aspects of a CNN:
 * Activations of a specific layer / kernel to specific images
 * The 2D pattern that maximally activates a kernel
 * Saliency maps
+* (Email me at yangz2@carleton.edu about anything you would like to visualize!)
+
+The main resource that tremendously helped the development of this project is:
+* Deep Learning with Python by Francis Chollet
 
 ## Getting Started: 30 seconds to CNNVis
