@@ -9,7 +9,7 @@ Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.mod
 * Activations / feature maps of a specific layer to a specific image ([Do this in 3 lines of code](#plot-activations))
 * The 2D pattern that maximally activates a kernel ([Under construction](#plot-max-activation-image))
 * Saliency maps ([Under construction](#plot-saliency_map))
-* (Email yangz2@carleton.edu about anything you would like me to add!)
+* Email yangz2@carleton.edu about any features that you would like me to add!
 
 The main resource that tremendously helped the development of this project is:
 * The official Keras documentation: https://keras.io/
