@@ -5,8 +5,8 @@
 Welcome to CNNVis! CNNVis is a high-level convolutional neural network (CNN) visualization API built on top of Keras. The intention behind this project aligns with the intention of Keras: "Being able to go from idea to result with the least possible daly is key to doing good research". 
 
 Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.models.Sequential` or `keras.models.Model` instance):
-* Kernels / filters ([Do this in 2 lines of code](#🚀plot-kernels))
-* Activations / feature maps of a specific layer to a specific image ([Do this in 3 lines of code](#🚀plot-activations))
+* Kernels / filters ([Do this in 2 lines of code](#plot-kernels))
+* Activations / feature maps of a specific layer to a specific image ([Do this in 3 lines of code](#plot-activations))
 * The 2D pattern that maximally activates a kernel
 * Saliency maps
 * (Email yangz2@carleton.edu about anything you would like me to add!)
@@ -41,7 +41,7 @@ To **print the "cnn style" summary** (including the number of kernels, the size 
 visualizer.model_summary(style='cnn')
 ```
 
-### 🚀plot-kernels
+### plot-kernels
 To **plot kernels / filters**:
 ```python
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
@@ -53,7 +53,7 @@ To **obtain kernels / filters as a tensor** with dimension (index, height, width
 kernels = visualizer.get_kernels(layer_name, style='tensors')
 ```
 
-### 🚀plot-activations
+### plot-activations
 To **plot activations / feature maps of a specific layer to a specific image**:
 ```python
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
