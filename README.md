@@ -1,2 +1,2 @@
-# cnnvis - Visualizing CNNs
+# CNNVis: Visualizing CNNs
 Visualizations for Convolutional Neural Networks
