@@ -5,7 +5,7 @@
 Welcome to CNNVis! CNNVis is a high-level convolutional neural network (CNN) visualization API built on top of Keras. The intention behind this project aligns with the intention of Keras: "Being able to go from idea to result with the least possible daly is key to doing good research". 
 
 Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.models.Sequential` or `keras.models.Model` instance):
-* Kernels / filters [Do this in 2 lines of code](# plot kernels)
+* Kernels / filters [Do this in 2 lines of code](#plot kernels)
 * Activations / feature maps of a specific layer to a specific image
 * The 2D pattern that maximally activates a kernel
 * Saliency maps
