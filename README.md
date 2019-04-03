@@ -81,12 +81,12 @@ Number of Dense layers: 3
 To plot kernels / filters:
 ```python
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
-visualizer.get_kernels(layer_name, style='plots')
+visualizer.get_kernels(layer_name, style='plots') # returns nothing, only plots
 ```
 
 To obtain kernels / filters as a **tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
 ```python
-kernels = visualizer.get_kernels(layer_name, style='tensors')
+kernels = visualizer.get_kernels(layer_name, style='tensors') # returns a tensor, plots nothing
 ```
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/kernels.png" alt="drawing" width="500"/>
 
@@ -94,12 +94,12 @@ kernels = visualizer.get_kernels(layer_name, style='tensors')
 To plot activations / feature maps of a specific layer to a specific image:
 ```python
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
-img_path = '/Users/yangzhihan/datasets/cats_and_dogs_dataset/test/cats/1780.jpg'
-visualizer.get_activations(layer_name, img_path, style='plots')
+img_path = '/Users/yangzhihan/datasets/cats_and_dogs_dataset/test/cats/1780.jpg' # an example path
+visualizer.get_activations(layer_name, img_path, style='plots') # returns nothing, only plots
 ```
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/activations.png" alt="drawing" width="500"/>
 
 To obtain activations / feature maps as a **tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
 ```python
-visualizer.get_activations(layer_name, img_path, style='tensors')
+visualizer.get_activations(layer_name, img_path, style='tensors') # returns a tensor, plots nothing
 ```
