@@ -5,6 +5,7 @@
 Welcome to CNNVis! CNNVis is a high-level convolutional neural network (CNN) visualization API built on top of Keras. The intention behind this project aligns with the intention of Keras: "Being able to go from idea to result with the least possible daly is key to doing good research". 
 
 Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.models.Sequential` or `keras.models.Model` instance):
+* [sdssd](https://github.com/zhihanyang2022/cnnvis/blob/master/README.md#print-summary-1-print-summary)
 * Kernels / filters ([Do this in 2 lines of code](#2-plot-kernels))
 * Activations / feature maps of a specific layer to a specific image ([Do this in 3 lines of code](#3-plot-activations))
 * The 2D pattern that maximally activates a kernel
@@ -31,7 +32,7 @@ vgg16_model = keras.applications.VGG16(weights='imagenet', include_top=True)
 visualizer = Visualizer(model=vgg16_model, model_input_shape=(1, 224, 224, 3) # (batch_size, height, width, num_channels)
 ```
 
-### Print Summary #1-print-summary
+### Print Summary 
 
 To **print the default summary** of the vgg16 network:
 ```python
