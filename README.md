@@ -25,7 +25,9 @@ First, make sure that all dependencies are installed (`pip install <library-name
 * prettytable
 * Keras
 
-To instantiate a `Visualizer` for visualizing aspects of the vgg16 network (or any other `keras.models.Sequential` and `keras.models.Model` instances:
+### Initiate a Visualizer instance
+
+To instantiate a `Visualizer` for visualizing aspects of the vgg16 network (or any `keras.models.Sequential` and `keras.models.Model` instances that are CNNs):
 ```python
 vgg16_model = keras.applications.VGG16(weights='imagenet', include_top=True)
 visualizer = Visualizer(model=vgg16_model, model_input_shape=(1, 224, 224, 3) # (batch_size, height, width, num_channels)
