@@ -41,6 +41,38 @@ To **print the "cnn style" summary** (including the number of kernels, the size 
 visualizer.model_summary(style='cnn')
 ```
 
+CNN Style Model Summary
++--------------+--------------+------------+-------------+----------------+---------------------+
+|  Layer Name  |  Layer Type  | Kernel Num | Kernel Size | Kernel Padding |     Output Shape    |
++--------------+--------------+------------+-------------+----------------+---------------------+
+| block1_conv1 |    Conv2D    |     64     |    (3, 3)   |      same      |  (1, 224, 224, 64)  |
+| block1_conv2 |    Conv2D    |     64     |    (3, 3)   |      same      |  (1, 224, 224, 64)  |
+| block1_pool  | MaxPooling2D |     /      |    (2, 2)   |       /        |   (1, 112, 112, 3)  |
+| block2_conv1 |    Conv2D    |    128     |    (3, 3)   |      same      |  (1, 224, 224, 128) |
+| block2_conv2 |    Conv2D    |    128     |    (3, 3)   |      same      |  (1, 224, 224, 128) |
+| block2_pool  | MaxPooling2D |     /      |    (2, 2)   |       /        |   (1, 112, 112, 3)  |
+| block3_conv1 |    Conv2D    |    256     |    (3, 3)   |      same      |  (1, 224, 224, 256) |
+| block3_conv2 |    Conv2D    |    256     |    (3, 3)   |      same      |  (1, 224, 224, 256) |
+| block3_conv3 |    Conv2D    |    256     |    (3, 3)   |      same      |  (1, 224, 224, 256) |
+| block3_pool  | MaxPooling2D |     /      |    (2, 2)   |       /        |   (1, 112, 112, 3)  |
+| block4_conv1 |    Conv2D    |    512     |    (3, 3)   |      same      |  (1, 224, 224, 512) |
+| block4_conv2 |    Conv2D    |    512     |    (3, 3)   |      same      |  (1, 224, 224, 512) |
+| block4_conv3 |    Conv2D    |    512     |    (3, 3)   |      same      |  (1, 224, 224, 512) |
+| block4_pool  | MaxPooling2D |     /      |    (2, 2)   |       /        |   (1, 112, 112, 3)  |
+| block5_conv1 |    Conv2D    |    512     |    (3, 3)   |      same      |  (1, 224, 224, 512) |
+| block5_conv2 |    Conv2D    |    512     |    (3, 3)   |      same      |  (1, 224, 224, 512) |
+| block5_conv3 |    Conv2D    |    512     |    (3, 3)   |      same      |  (1, 224, 224, 512) |
+| block5_pool  | MaxPooling2D |     /      |    (2, 2)   |       /        |   (1, 112, 112, 3)  |
+|   flatten    |   Flatten    |     /      |      /      |       /        |     (1, 150528)     |
+|     fc1      |    Dense     |     /      |      /      |       /        | (1, 224, 224, 4096) |
+|     fc2      |    Dense     |     /      |      /      |       /        | (1, 224, 224, 4096) |
+| predictions  |    Dense     |     /      |      /      |       /        | (1, 224, 224, 1000) |
++--------------+--------------+------------+-------------+----------------+---------------------+
+Training set: 1000 Categories of ImageNet
+Number of Conv2D layers: 13
+Number of MaxPooling2D layers: 5
+Number of Dense layers: 3
+
 ### plot-kernels
 To **plot kernels / filters**:
 ```python
