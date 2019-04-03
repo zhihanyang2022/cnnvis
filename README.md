@@ -5,7 +5,7 @@
 Welcome to CNNVis! CNNVis is a high-level convolutional neural network (CNN) visualization API built on top of Keras. The intention behind this project aligns with the intention of Keras: "Being able to go from idea to result with the least possible daly is key to doing good research". 
 
 Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.models.Sequential` or `keras.models.Model` instance):
-* Kernels / filters
+* Kernels / filters [Do this in 2 lines of code](#plot-kernels)
 * Activations / feature maps of a specific layer to a specific image
 * The 2D pattern that maximally activates a kernel
 * Saliency maps
@@ -25,8 +25,6 @@ First, make sure that all dependencies are installed (`pip install <library-name
 * prettytable
 * Keras
 
-The `Visualizer` class is the only class defined in this library. 
-
 To instantiate a `Visualizer` for visualizing aspects of the vgg16 network (or any other `keras.models.Sequential` and `keras.models.Model` instances:
 ```
 vgg16_model = keras.applications.VGG16(weights='imagenet', include_top=True)
@@ -43,6 +41,7 @@ To **print the "cnn style" summary** (including the number of kernels, the size 
 visualizer.model_summary(style='cnn')
 ```
 
+#plot-kernels
 To **plot kernels / filters**:
 ```
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
