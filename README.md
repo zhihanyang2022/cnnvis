@@ -1,5 +1,3 @@
-# TODO: add some diagrams and describe more methods
-
 # CNNVis: Visualizing CNNs
 
 Welcome to CNNVis! CNNVis is a high-level convolutional neural network (CNN) visualization API built on top of Keras. The intention behind this project aligns with the intention of Keras: "Being able to go from idea to result with the least possible daly is key to doing good research". 
@@ -90,6 +88,7 @@ To obtain kernels / filters as a **tensor** with dimension (index, height, width
 ```python
 kernels = visualizer.get_kernels(layer_name, style='tensors')
 ```
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/kernels.png" alt="drawing" width="750"/>
 
 ### Plot Activations
 To plot activations / feature maps of a specific layer to a specific image:
