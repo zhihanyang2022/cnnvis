@@ -88,7 +88,7 @@ To obtain kernels / filters as a **tensor** with dimension (index, height, width
 ```python
 kernels = visualizer.get_kernels(layer_name, style='tensors')
 ```
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/kernels.png" alt="drawing" width="750"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/kernels.png" alt="drawing" width="500"/>
 
 ### Plot Activations
 To plot activations / feature maps of a specific layer to a specific image:
@@ -97,7 +97,7 @@ layer_name = 'block1_conv1' # find the layer names in the zeroth column heading 
 img_path = '/Users/yangzhihan/datasets/cats_and_dogs_dataset/test/cats/1780.jpg'
 visualizer.get_activations(layer_name, img_path, style='plots')
 ```
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/activations.png" alt="drawing" width="750"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/activations.png" alt="drawing" width="500"/>
 
 To obtain activations / feature maps as a **tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
 ```python
