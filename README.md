@@ -15,7 +15,7 @@ The main resource that tremendously helped the development of this project is:
 * The official Keras documentation: https://keras.io/
 * Chapter 5: Computer Vision of _Deep Learning with Python_ by Francis Chollet
 
-This library only supports a TensorFlow backend for Keras.
+<u>Important Note</u>: This library only supports a TensorFlow backend for Keras.
 
 ## Getting Started: 30 seconds to CNNVis
 
