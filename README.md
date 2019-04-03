@@ -41,7 +41,7 @@ To **print the "cnn style" summary** (including the number of kernels, the size 
 visualizer.model_summary(style='cnn')
 ```
 
-# plot-kernels
+### plot-kernels
 To **plot kernels / filters**:
 ```
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
