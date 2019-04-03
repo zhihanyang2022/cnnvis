@@ -14,7 +14,7 @@ Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.mod
 * Email yangz2@carleton.edu about any additional features that you would like to visualize!
 
 The main resources that tremendously helped the development of this project are:
-* Chapter 5: Computer Vision of _Deep Learning with Python_ by Francis Chollet
+* Chapter 5: Computer Vision, of book _Deep Learning with Python_ by Francis Chollet
 * The official Keras documentation: https://keras.io/
 
 <u>Important Note</u>: This library only supports your Keras if your backend is TensorFlow.
