@@ -1,4 +1,5 @@
 # CNNVis: Visualizing CNNs
+
 Welcome to CNNVis! CNNVis is a high-level convolutional neural network (CNN) visualization API built on top of Keras. The intention behind this project aligns with the intention of Keras: "Being able to go from idea to result with the least possible daly is key to doing good research". 
 
 Use CNNVis if you need to visualize the following aspects of a CNN:
