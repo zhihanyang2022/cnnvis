@@ -41,6 +41,7 @@ To **print the "cnn style" summary** (including the number of kernels, the size 
 visualizer.model_summary(style='cnn')
 ```
 
+```
 CNN Style Model Summary
 +--------------+--------------+------------+-------------+----------------+---------------------+
 |  Layer Name  |  Layer Type  | Kernel Num | Kernel Size | Kernel Padding |     Output Shape    |
@@ -72,6 +73,7 @@ Training set: 1000 Categories of ImageNet
 Number of Conv2D layers: 13
 Number of MaxPooling2D layers: 5
 Number of Dense layers: 3
+```
 
 ### plot-kernels
 To **plot kernels / filters**:
