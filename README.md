@@ -80,7 +80,7 @@ Number of Dense layers: 3
 ### Plot Kernels
 To plot kernels / filters:
 ```python
-layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
+layer_name = 'block1_conv1' # find the layer_name of the layer of interest in the zeroth column heading of "cnn style" model summary
 visualizer.get_kernels(layer_name, style='plots') # returns nothing, only plots
 ```
 
@@ -93,7 +93,7 @@ kernels = visualizer.get_kernels(layer_name, style='tensors') # returns a tensor
 ### Plot Activations
 To plot activations / feature maps of a specific layer to a specific image:
 ```python
-layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
+layer_name = 'block1_conv1' # find the layer_name of the layer of interest in the zeroth column heading of "cnn style" model summary
 img_path = '/Users/yangzhihan/datasets/cats_and_dogs_dataset/test/cats/1780.jpg' # an example path
 visualizer.get_activations(layer_name, img_path, style='plots') # returns nothing, only plots
 ```
