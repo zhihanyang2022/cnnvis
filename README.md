@@ -45,7 +45,7 @@ layer_name = 'block1_conv1' # find the layer names in the zeroth column heading 
 visualizer.get_kernels(layer_name, style='plots')
 ```
 
-To **obtain kernels / filters as a tensor** with dimension (index, height, width, num_channels), use `'tensors'` as the value to parameter `style` instead:
+To **obtain kernels / filters as a tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
 ```
 kernels = visualizer.get_kernels(layer_name, style='tensors')
 ```
@@ -57,10 +57,11 @@ img_path = '/Users/yangzhihan/datasets/cats_and_dogs_dataset/test/cats/1780.jpg'
 visualizer.get_activations(layer_name, img_path, style='plots')
 ```
 
-To **obtain activations / feature maps as a tensor** with dimension (index, height, width, num_channels), use `'tensors'` as the value to parameter `style` instead:
+To **obtain activations / feature maps as a tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
 ```
 visualizer.get_activations(layer_name, img_path, style='tensors')
 ```
+
 
 
 
