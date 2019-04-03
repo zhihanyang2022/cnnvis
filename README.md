@@ -9,7 +9,7 @@ Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.mod
 * Activations / feature maps of a specific layer to a specific image ([Do this in 3 lines of code](#plot-activations))
 * The 2D pattern that maximally activates a kernel
 * Saliency maps
-* (Email yangz2@carleton.edu about anything you would like to visualize!)
+* (Email yangz2@carleton.edu about anything you would like me to add!)
 
 The main resource that tremendously helped the development of this project is:
 * The official Keras documentation: https://keras.io/
@@ -26,36 +26,36 @@ First, make sure that all dependencies are installed (`pip install <library-name
 * Keras
 
 To instantiate a `Visualizer` for visualizing aspects of the vgg16 network (or any other `keras.models.Sequential` and `keras.models.Model` instances:
-```
+```python
 vgg16_model = keras.applications.VGG16(weights='imagenet', include_top=True)
 visualizer = Visualizer(model=vgg16_model, model_input_shape=(1, 224, 224, 3) # (batch_size, height, width, num_channels)
 ```
 
 To **print the default summary** of the vgg16 network:
-```
+```python
 visualizer.model_summary(style='default')
 ```
 
 To **print the "cnn style" summary** (including the number of kernels, the size of kernels and the style of padding for each layer)  of the vgg16 network:
-```
+```python
 visualizer.model_summary(style='cnn')
 ```
 
 ### plot-kernels
 To **plot kernels / filters**:
-```
+```python
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
 visualizer.get_kernels(layer_name, style='plots')
 ```
 
 To **obtain kernels / filters as a tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
-```
+```python
 kernels = visualizer.get_kernels(layer_name, style='tensors')
 ```
 
 ### plot-activations
 To **plot activations / feature maps of a specific layer to a specific image**:
-```
+```python
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
 img_path = '/Users/yangzhihan/datasets/cats_and_dogs_dataset/test/cats/1780.jpg'
 visualizer.get_activations(layer_name, img_path, style='plots')
@@ -63,6 +63,6 @@ visualizer.get_activations(layer_name, img_path, style='plots')
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/activations.png" alt="drawing" width="750"/>
 
 To **obtain activations / feature maps as a tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
-```
+```python
 visualizer.get_activations(layer_name, img_path, style='tensors')
 ```
