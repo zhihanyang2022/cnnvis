@@ -31,7 +31,7 @@ vgg16_model = keras.applications.VGG16(weights='imagenet', include_top=True)
 visualizer = Visualizer(model=vgg16_model, model_input_shape=(1, 224, 224, 3) # (batch_size, height, width, num_channels)
 ```
 
-### 1-print-summary
+### Print Summary #1-print-summary
 
 To **print the default summary** of the vgg16 network:
 ```python
