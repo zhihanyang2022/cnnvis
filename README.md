@@ -19,7 +19,7 @@ The main resource that tremendously helped the development of this project is:
 
 ## Getting Started: 30 seconds to CNNVis
 
-First, make sure that all dependencies are installed:
+First, make sure that all dependencies are installed (`pip install <library-name>` is recommended):
 * Numpy
 * matplotlib
 * prettytable
