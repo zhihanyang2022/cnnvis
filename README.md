@@ -49,6 +49,8 @@ layer_name = 'block1_conv1' # find the layer names in the zeroth column heading 
 visualizer.get_kernels(layer_name, style='plots')
 ```
 
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/activations.png" alt="drawing" width="200"/>
+
 To **obtain kernels / filters as a tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
 ```
 kernels = visualizer.get_kernels(layer_name, style='tensors')
