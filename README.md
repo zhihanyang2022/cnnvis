@@ -38,7 +38,7 @@ To print the **default summary** of the vgg16 network:
 visualizer.model_summary(style='default')
 ```
 
-To print the **"cnn style" summary** (including the number of kernels, the size of kernels and the style of padding for each layer)  of the vgg16 network:
+To print the **"cnn style" summary** of the vgg16 network:
 ```python
 visualizer.model_summary(style='cnn')
 ```
