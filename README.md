@@ -6,7 +6,7 @@ Welcome to CNNVis! CNNVis is a high-level convolutional neural network (CNN) vis
 
 Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.models.Sequential` or `keras.models.Model` instance):
 * Kernels / filters ([Do this in 2 lines of code](#plot-kernels))
-* Activations / feature maps of a specific layer to a specific image
+* Activations / feature maps of a specific layer to a specific image ([Do this in 3 lines of code](#plot-activations))
 * The 2D pattern that maximally activates a kernel
 * Saliency maps
 * (Email yangz2@carleton.edu about anything you would like to visualize!)
@@ -48,19 +48,19 @@ layer_name = 'block1_conv1' # find the layer names in the zeroth column heading 
 visualizer.get_kernels(layer_name, style='plots')
 ```
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/activations.png" alt="drawing" width="750"/>
-
 To **obtain kernels / filters as a tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
 ```
 kernels = visualizer.get_kernels(layer_name, style='tensors')
 ```
 
+### plot-activations
 To **plot activations / feature maps of a specific layer to a specific image**:
 ```
 layer_name = 'block1_conv1' # find the layer names in the zeroth column heading of "cnn style" model summary
 img_path = '/Users/yangzhihan/datasets/cats_and_dogs_dataset/test/cats/1780.jpg'
 visualizer.get_activations(layer_name, img_path, style='plots')
 ```
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/activations.png" alt="drawing" width="750"/>
 
 To **obtain activations / feature maps as a tensor** with dimension (index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
 ```
