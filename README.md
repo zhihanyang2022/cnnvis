@@ -126,6 +126,7 @@ To plot the feature map of a specific layer to a specific image (e.g. giraffe):
 
 ```python
 feature_map = visualizer.get_feature_maps(['block5_conv3'], ['giraffe.png'])
+```
 
 ```python
 import numpy as np
