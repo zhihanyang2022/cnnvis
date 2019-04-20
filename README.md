@@ -29,6 +29,9 @@ First, make sure that all dependencies are installed (`pip install <library-name
 
 To instantiate a `Visualizer` instance for the vgg16 network:
 ```python
+import keras
+from cnnvis import Visualizer
+
 vgg16_model = keras.applications.VGG16(weights='imagenet', include_top=True)
 visualizer = Visualizer(model=vgg16_model, image_shape=(224, 224, 3), batch_size=1, preprocess_style='vgg16')
 ```
