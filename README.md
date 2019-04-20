@@ -137,6 +137,38 @@ plt.show()
 
 ### Plot mean activations
 
+To plot mean activations of multiple layers to multiple images (e.g. a cat image and a dog image):
+
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/cat.png" alt="drawing" width="200"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/dog.png" alt="drawing" width="200"/>
+
+```python
+mean_activation = visualizer.get_mean_activations(['block5_conv2', 'block5_conv3'], [img_path_cat, img_path_dog])
+```
+
+```python
+plt.plot(mean_activation[0, 0], label='Cat', alpha=0.6)
+plt.plot(mean_activation[0, 1], label='Dog', alpha=0.6)
+plt.xlabel('Kernel Index')
+plt.ylabel('Mean Activation')
+plt.title('Mean activations of block5_conv2')
+plt.legend()
+plt.show()
+```
+
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/mean_activations_1.png" alt="drawing" width="400"/>
+
+```python
+plt.plot(mean_activation[1, 0], label='Cat', alpha=0.6)
+plt.plot(mean_activation[1, 1], label='Dog', alpha=0.6)
+plt.xlabel('Kernel Index')
+plt.ylabel('Mean Activation')
+plt.title('Mean activations of block5_conv3')
+plt.legend()
+plt.show()
+```
+
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/mean_activations_2.png" alt="drawing" width="400"/>
 
 
 ### Plot max activation
