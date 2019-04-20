@@ -123,7 +123,7 @@ plt.imshow(saliency_maps[2])
 
 To plot feature maps of a specific layer to a specific image (e.g. giraffe):
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/giraffe.png" alt="drawing" width="500"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/giraffe.jpeg" alt="drawing" width="500"/>
 
 ```python
 import numpy as np
