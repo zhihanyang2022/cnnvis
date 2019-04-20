@@ -2,14 +2,17 @@
 
 ## Welcome
 
-CNNVis is a high-level convolutional neural network (CNN) visualization API built on top of Keras. The intention behind this project aligns with the intention of Keras: "Being able to go from idea to result with the least possible daly is key to doing good research". 
+CNNVis is a high-level convolutional neural network (CNN) visualization API built on top of Keras. The intention behind this project aligns with the intention of Keras: "Being able to go from idea to result with the least possible delay is key to doing good research". 
 
-Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.models.Sequential` or `keras.models.Model` instance):
-* Kernels ([2 lines of code](#plot-kernels))
-* Activations / feature maps of a specific layer to a specific image ([3 lines of code](#plot-activations))
-* The 2D pattern that maximally activates a kernel ([1 line of code](#plot-max-activation-image))
-* Saliency maps ([1 line of code](#plot-saliency-map))
-* Email yangz2@carleton.edu about any additional features that you would like to visualize!
+Use CNNVis if you need to visualize the following aspects of a CNN. Of course, your CNN model needs to be a `keras.models.Sequential` or `keras.models.Model` instance.
+
+* [Kernels](#plot-kernel)
+* [Feature maps](#plot-feature-map)
+* [Mean activations](#plot-mean-activations)
+* [Max activations](#plot-max-activation)
+* [Saliency maps](#plot-saliency-map)
+
+Feel free to email me at yangz2@carleton.edu about any additional features that you would like to visualize!
 
 The main resources that tremendously helped the development of this project are:
 * Chapter 5: Computer Vision, of book _Deep Learning with Python_ by Francis Chollet
@@ -82,7 +85,7 @@ Number of MaxPooling2D layers: 5
 Number of Dense layers: 3
 ```
 
-## Plot saliency maps
+## Plot saliency map
 
 To plot saliency maps:
 
@@ -109,7 +112,7 @@ plt.imshow(saliency_maps[2])
 
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_maps.png" alt="drawing" width="500"/>
 
-### Plot feature maps
+### Plot feature map
 
 To plot feature maps of a specific layer to a specific image (e.g. giraffe):
 
