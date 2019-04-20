@@ -140,7 +140,7 @@ plt.show()
 To plot mean activations of multiple layers to multiple images (e.g. a cat image and a dog image):
 
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/cat.png" alt="drawing" width="200"/>
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/dog.png" alt="drawing" width="200"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/dog.jpg" alt="drawing" width="200"/>
 
 ```python
 mean_activation = visualizer.get_mean_activations(['block5_conv2', 'block5_conv3'], [img_path_cat, img_path_dog])
