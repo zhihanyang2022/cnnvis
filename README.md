@@ -108,7 +108,7 @@ plt.show()
 
 ## Plot saliency maps
 
-To plot saliency maps of images:
+To plot saliency maps:
 
 ```python
 import numpy as np
