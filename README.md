@@ -204,7 +204,7 @@ plt.matshow(np.mean(kernels[:, :, :, 1], axis=-1))
 plt.show()
 ```
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/kernel.png" alt="drawing" width="400"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/kernel.png" alt="drawing" width="300"/>
 
 
 
