@@ -95,11 +95,14 @@ kernels = visualizer.get_kernels(layer_name, style='tensors') # returns a tensor
 ### Plot activations
 To plot activations / feature maps of a specific layer to a specific image:
 ```python
-layer_name = 'block1_conv1' # find the layer_name of the layer of interest in the zeroth column heading of "cnn style" model summary
-img_path = '/Users/yangzhihan/datasets/cats_and_dogs_dataset/test/cats/1780.jpg' # an example path
-visualizer.get_activations(layer_name, img_path, style='plots') # returns nothing, only plots
+import numpy as np
+from matplotlib import pyplot as plt
+
+feature_map = visualizer.get_feature_maps(['block5_conv3'], ['giraffe.png'])
+plt.matshow(np.mean(feature_map[0, 0], axis=-1))
+plt.show()
 ```
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/activations.png" alt="drawing" width="500"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/feature_map_giraffe.png" alt="drawing" width="500"/>
 
 To obtain activations / feature maps as a **tensor** with dimension (activation_index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
 ```python
