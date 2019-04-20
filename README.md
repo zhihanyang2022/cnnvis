@@ -156,7 +156,7 @@ plt.legend()
 plt.show()
 ```
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/mean_activations_1.png" alt="drawing" width="400"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/mean_activations_1.png" alt="drawing" width="300"/>
 
 ```python
 plt.plot(mean_activation[1, 0], label='Cat', alpha=0.6)
