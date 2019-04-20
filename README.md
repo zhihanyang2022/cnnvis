@@ -92,8 +92,9 @@ kernels = visualizer.get_kernels(layer_name, style='tensors') # returns a tensor
 ```
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/kernels.png" alt="drawing" width="500"/>
 
-### Plot activations
-To plot activations / feature maps of a specific layer to a specific image:
+### Plot feature maps
+
+To plot feature maps of a specific layer to a specific image:
 ```python
 import numpy as np
 from matplotlib import pyplot as plt
@@ -104,10 +105,26 @@ plt.show()
 ```
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/feature_map_giraffe.png" alt="drawing" width="500"/>
 
-To obtain activations / feature maps as a **tensor** with dimension (activation_index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
+## Plot saliency maps
+
+To obtain thje saliency map of a specific image:
 ```python
-visualizer.get_activations(layer_name, img_path, style='tensors') # returns a tensor, plots nothing
+import numpy as np
+from matplotlib import pyplot as plt
+
+# put more img_path in this list to obtain multiple saliency maps
+saliency_map_fish = visualizer.get_saliency_map(['fish.png'])  
+plt.imshow(saliency_map_fish)
+plt.title('Saliency Map of Fish')
+plt.show()
 ```
 
-### Plot max activation image
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_map_fish.png" alt="drawing" width="500"/>
+
+
+### Plot max activation
+
+To plot max 
+
+
 ### Plot saliency map
