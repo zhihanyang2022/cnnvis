@@ -167,7 +167,6 @@ plt.show()
 
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/mean_activations_2.png" alt="drawing" width="400"/>
 
-
 ### Plot max activation
 
 To plot max activation to specific kernels in a specific layer:
@@ -190,5 +189,22 @@ plt.axis('off')
 plt.show()
 ```
 
-
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/max_activation_2.png" alt="drawing" width="400"/>
+
+### Plot kernel
+
+To plot kernels
+
+```python
+kernels = visualizer.get_kernels('block2_conv1')
+```
+
+```python
+plt.matshow(np.mean(kernels[:, :, :, 1], axis=-1))
+plt.show()
+```
+
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/kernel.png" alt="drawing" width="400"/>
+
+
+
