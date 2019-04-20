@@ -95,6 +95,7 @@ kernels = visualizer.get_kernels(layer_name, style='tensors') # returns a tensor
 ### Plot feature maps
 
 To plot feature maps of a specific layer to a specific image:
+
 ```python
 import numpy as np
 from matplotlib import pyplot as plt
@@ -107,7 +108,7 @@ plt.show()
 
 ## Plot saliency maps
 
-To obtain the saliency map of an image:
+To plot saliency maps of images:
 
 ```python
 import numpy as np
@@ -115,6 +116,7 @@ from matplotlib import pyplot as plt
 
 img_paths = ['fish.jpg', 'bird.jpg', 'elephants.jpg']  # put more img_paths in this list to obtain multiple saliency maps
 saliency_maps = visualizer.get_saliency_map(img_paths)  
+
 f, axarr = plt.subplots(1,3)
 axarr[0].imshow(saliency_maps[0])
 axarr[1].imshow(saliency_maps[1])
