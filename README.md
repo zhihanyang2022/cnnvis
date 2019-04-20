@@ -115,14 +115,14 @@ from matplotlib import pyplot as plt
 
 img_paths = ['fish.jpg', 'bird.jpg', 'elephants.jpg']  # put more img_paths in this list to obtain multiple saliency maps
 saliency_maps = visualizer.get_saliency_map(img_paths)  
-for i in saliency_maps:
-    plt.imshow(i)
-    plt.show()
+f, axarr = plt.subplots(1,3)
+axarr[0].imshow(saliency_maps[0])
+axarr[1].imshow(saliency_maps[1])
+axarr[2].imshow(saliency_maps[2])
+plt.show()
 ```
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_map_fish.png" alt="drawing" width="500"/>
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_map_bird.png" alt="drawing" width="500"/>
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_map_elephant.png" alt="drawing" width="500"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_maps.png" alt="drawing" width="500"/>
 
 
 ### Plot max activation
