@@ -133,7 +133,7 @@ feature_map = visualizer.get_feature_maps(['block5_conv3'], ['giraffe.png'])
 plt.matshow(np.mean(feature_map[0, 0], axis=-1))
 plt.show()
 ```
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/feature_map_giraffe.png" alt="drawing" width="400"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/feature_map_giraffe.png" alt="drawing" width="200"/>
 
 ### Plot mean activations
 
