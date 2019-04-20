@@ -107,19 +107,22 @@ plt.show()
 
 ## Plot saliency maps
 
-To obtain thee saliency map of an image:
+To obtain the saliency map of an image:
+
 ```python
 import numpy as np
 from matplotlib import pyplot as plt
 
-img_paths = ['fish.png']  # put more img_paths in this list to obtain multiple saliency maps
-saliency_map_fish = visualizer.get_saliency_map(img_paths)  
-plt.imshow(saliency_map_fish)
-plt.title('Saliency Map of Fish')
-plt.show()
+img_paths = ['fish.jpg', 'bird.jpg', 'elephants.jpg']  # put more img_paths in this list to obtain multiple saliency maps
+saliency_maps = visualizer.get_saliency_map(img_paths)  
+for i in saliency_maps:
+    plt.imshow(i)
+    plt.show()
 ```
 
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_map_fish.png" alt="drawing" width="500"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_map_bird.png" alt="drawing" width="500"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_map_elephant.png" alt="drawing" width="500"/>
 
 
 ### Plot max activation
