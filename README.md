@@ -45,12 +45,12 @@ visualizer = Visualizer(model=vgg16_model, image_shape=(224, 224, 3), batch_size
 
 To print the **default summary**:
 ```python
-visualizer.model_summary(style='default')
+visualizer.summary(style='default')
 ```
 
 To print the **"cnn style" summary**:
 ```python
-visualizer.model_summary(style='cnn')
+visualizer.summary(style='cnn')
 ```
 
 ```
