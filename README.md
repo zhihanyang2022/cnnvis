@@ -107,13 +107,13 @@ plt.show()
 
 ## Plot saliency maps
 
-To obtain thje saliency map of a specific image:
+To obtain thee saliency map of an image:
 ```python
 import numpy as np
 from matplotlib import pyplot as plt
 
-# put more img_path in this list to obtain multiple saliency maps
-saliency_map_fish = visualizer.get_saliency_map(['fish.png'])  
+img_paths = ['fish.png']  # put more img_paths in this list to obtain multiple saliency maps
+saliency_map_fish = visualizer.get_saliency_map(img_paths)  
 plt.imshow(saliency_map_fish)
 plt.title('Saliency Map of Fish')
 plt.show()
