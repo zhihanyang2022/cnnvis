@@ -8,7 +8,7 @@ Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.mod
 * Kernels / filters ([Do this in 2 lines of code](#plot-kernels))
 * Activations / feature maps of a specific layer to a specific image ([Do this in 3 lines of code](#plot-activations))
 * The 2D pattern that maximally activates a kernel ([Under construction](#plot-max-activation-image))
-* Saliency maps ([1 line of code](#plot-saliency_map))
+* Saliency maps ([1 line of code](#plot-saliency-map))
 * Email yangz2@carleton.edu about any additional features that you would like to visualize!
 
 The main resources that tremendously helped the development of this project are:
