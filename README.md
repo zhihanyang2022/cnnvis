@@ -92,20 +92,6 @@ kernels = visualizer.get_kernels(layer_name, style='tensors') # returns a tensor
 ```
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/kernels.png" alt="drawing" width="500"/>
 
-### Plot feature maps
-
-To plot feature maps of a specific layer to a specific image:
-
-```python
-import numpy as np
-from matplotlib import pyplot as plt
-
-feature_map = visualizer.get_feature_maps(['block5_conv3'], ['giraffe.png'])
-plt.matshow(np.mean(feature_map[0, 0], axis=-1))
-plt.show()
-```
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/feature_map_giraffe.png" alt="drawing" width="500"/>
-
 ## Plot saliency maps
 
 To plot saliency maps:
@@ -133,10 +119,27 @@ plt.imshow(saliency_maps[2])
 
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_maps.png" alt="drawing" width="500"/>
 
+### Plot feature maps
+
+To plot feature maps of a specific layer to a specific image (e.g. giraffe):
+
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/giraffe.png" alt="drawing" width="500"/>
+
+```python
+import numpy as np
+from matplotlib import pyplot as plt
+
+feature_map = visualizer.get_feature_maps(['block5_conv3'], ['giraffe.png'])
+plt.matshow(np.mean(feature_map[0, 0], axis=-1))
+plt.show()
+```
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/feature_map_giraffe.png" alt="drawing" width="500"/>
+
+### Plot mean activations
+
+
 
 ### Plot max activation
 
 To plot max 
 
-
-### Plot saliency map
