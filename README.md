@@ -25,22 +25,22 @@ First, make sure that all dependencies are installed (`pip install <library-name
 * prettytable
 * Keras
 
-### Initiate a Visualizer instance
+### Instantiate a Visualizer instance
 
 To instantiate a `Visualizer` instance for the vgg16 network:
 ```python
 vgg16_model = keras.applications.VGG16(weights='imagenet', include_top=True)
-visualizer = Visualizer(model=vgg16_model, input_shape=(1, 224, 224, 3) # (batch_size, height, width, num_channels)
+visualizer = Visualizer(model=vgg16_model, image_shape=(224, 224, 3), batch_size=1, preprocess_style='vgg16')
 ```
 
 ### Print summary 
 
-To print the **default summary** of the vgg16 network:
+To print the **default summary**:
 ```python
 visualizer.model_summary(style='default')
 ```
 
-To print the **"cnn style" summary** of the vgg16 network:
+To print the **"cnn style" summary**:
 ```python
 visualizer.model_summary(style='cnn')
 ```
@@ -78,19 +78,6 @@ Number of Conv2D layers: 13
 Number of MaxPooling2D layers: 5
 Number of Dense layers: 3
 ```
-
-### Plot kernels
-To plot kernels / filters:
-```python
-layer_name = 'block1_conv1' # find the layer_name of the layer of interest in the zeroth column heading of "cnn style" model summary
-visualizer.get_kernels(layer_name, style='plots') # returns nothing, only plots
-```
-
-To obtain kernels / filters as a **tensor** with dimension (kernel_index, height, width, num_channels), pass `'tensors'` as the value to parameter `style` instead:
-```python
-kernels = visualizer.get_kernels(layer_name, style='tensors') # returns a tensor, plots nothing
-```
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/kernels.png" alt="drawing" width="500"/>
 
 ## Plot saliency maps
 
