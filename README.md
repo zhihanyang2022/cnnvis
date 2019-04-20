@@ -112,6 +112,8 @@ plt.imshow(saliency_maps[1])
 fig.add_subplot(1, 3, 3)
 plt.axis('off')
 plt.imshow(saliency_maps[2])
+
+plt.show()
 ```
 
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_maps.png" alt="drawing" width="500"/>
