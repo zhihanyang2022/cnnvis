@@ -137,6 +137,8 @@ mean_activation = visualizer.get_mean_activations(['block5_conv2', 'block5_conv3
 ```
 
 ```python
+from matplotlib import pyplot as plt
+
 plt.plot(mean_activation[0, 0], label='Cat', alpha=0.6)
 plt.plot(mean_activation[0, 1], label='Dog', alpha=0.6)
 plt.xlabel('Kernel Index')
@@ -149,6 +151,8 @@ plt.show()
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/mean_activations_1.png" alt="drawing" width="400"/>
 
 ```python
+from matplotlib import pyplot as plt
+
 plt.plot(mean_activation[1, 0], label='Cat', alpha=0.6)
 plt.plot(mean_activation[1, 1], label='Dog', alpha=0.6)
 plt.xlabel('Kernel Index')
@@ -163,5 +167,19 @@ plt.show()
 
 ### Plot max activation
 
-To plot max 
+To plot max activation to specific kernels in a specific layer:
+
+```
+max_activations = visualizer.get_max_activations('block3_conv1', [12, 123], 2)
+
+for max_activation in max_activations:
+    plt.imshow(max_activation)
+    plt.axis('off')
+    plt.show()
+```
+
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/max_activation_1.png" alt="drawing" width="400"/>
+<img src="https://github.com/zhihanyang2022/pngs/blob/master/max_activation_2.png" alt="drawing" width="400"/>
+
+
 
