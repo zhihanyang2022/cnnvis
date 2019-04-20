@@ -8,7 +8,7 @@ Use CNNVis if you need to visualize the following aspects of a CNN (a `keras.mod
 * Kernels / filters ([Do this in 2 lines of code](#plot-kernels))
 * Activations / feature maps of a specific layer to a specific image ([Do this in 3 lines of code](#plot-activations))
 * The 2D pattern that maximally activates a kernel ([Under construction](#plot-max-activation-image))
-* Saliency maps ([Under construction](#plot-saliency_map))
+* Saliency maps ([1 line of code](#plot-saliency_map))
 * Email yangz2@carleton.edu about any additional features that you would like to visualize!
 
 The main resources that tremendously helped the development of this project are:
@@ -117,11 +117,18 @@ from matplotlib import pyplot as plt
 img_paths = ['fish.jpg', 'bird.jpg', 'elephants.jpg']  # put more img_paths in this list to obtain multiple saliency maps
 saliency_maps = visualizer.get_saliency_map(img_paths)  
 
-f, axarr = plt.subplots(1,3)
-axarr[0].imshow(saliency_maps[0])
-axarr[1].imshow(saliency_maps[1])
-axarr[2].imshow(saliency_maps[2])
-plt.show()
+fig = plt.figure()
+fig.add_subplot(1, 3, 1)
+plt.axis('off')
+plt.imshow(saliency_maps[0])
+
+fig.add_subplot(1, 3, 2)
+plt.axis('off')
+plt.imshow(saliency_maps[1])
+
+fig.add_subplot(1, 3, 3)
+plt.axis('off')
+plt.imshow(saliency_maps[2])
 ```
 
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_maps.png" alt="drawing" width="500"/>
