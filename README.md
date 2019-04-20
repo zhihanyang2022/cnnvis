@@ -14,7 +14,7 @@ Use CNNVis if you need to visualize the following aspects of a CNN. Of course, y
 
 Feel free to email me at yangz2@carleton.edu about any additional features that you would like to visualize!
 
-The main resources that tremendously helped the development of this project are:
+The main resources that helped the development of this project tremendously:
 * Chapter 5: Computer Vision, of book _Deep Learning with Python_ by Francis Chollet
 * The official Keras documentation: https://keras.io/
 
