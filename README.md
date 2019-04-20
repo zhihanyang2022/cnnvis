@@ -169,17 +169,23 @@ plt.show()
 
 To plot max activation to specific kernels in a specific layer:
 
-```
+```python
 max_activations = visualizer.get_max_activations('block3_conv1', [12, 123], 2)
+```
 
-for max_activation in max_activations:
-    plt.imshow(max_activation)
-    plt.axis('off')
-    plt.show()
+```python
+plt.imshow(max_activation[0])
+plt.axis('off')
+plt.show()
 ```
 
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/max_activation_1.png" alt="drawing" width="400"/>
+
+```python
+plt.imshow(max_activation[1])
+plt.axis('off')
+plt.show()
+```
+
+
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/max_activation_2.png" alt="drawing" width="400"/>
-
-
-
