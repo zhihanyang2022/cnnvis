@@ -22,15 +22,17 @@ The main resources that helped the development of this project tremendously:
 
 ## Getting Started: 30 seconds to CNNVis
 
-First, make sure that all dependencies are installed (`pip install <library-name>` is recommended):
+First, make sure that all dependencies are installed:
+* prettytable
 * Numpy
 * matplotlib
-* prettytable
+* PIL
 * Keras
 
-### Instantiate a Visualizer instance
+### First Step: Instantiate a Visualizer instance
 
-To instantiate a `Visualizer` instance for the vgg16 network:
+To instantiate a `Visualizer` instance for a vgg16 network:
+
 ```python
 import keras
 from cnnvis import Visualizer
@@ -90,11 +92,13 @@ Number of Dense layers: 3
 To plot saliency maps:
 
 ```python
+img_paths = ['fish.jpg', 'bird.jpg', 'elephants.jpg']
+saliency_maps = visualizer.get_saliency_map(img_paths)  
+```
+
+```python
 import numpy as np
 from matplotlib import pyplot as plt
-
-img_paths = ['fish.jpg', 'bird.jpg', 'elephants.jpg']  # put more img_paths in this list to obtain multiple saliency maps
-saliency_maps = visualizer.get_saliency_map(img_paths)  
 
 fig = plt.figure()
 fig.add_subplot(1, 3, 1)
@@ -114,15 +118,17 @@ plt.imshow(saliency_maps[2])
 
 ### Plot feature map
 
-To plot feature maps of a specific layer to a specific image (e.g. giraffe):
+To plot the feature map of a specific layer to a specific image (e.g. giraffe):
 
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/giraffe.jpeg" alt="drawing" width="400"/>
+
+```python
+feature_map = visualizer.get_feature_maps(['block5_conv3'], ['giraffe.png'])
 
 ```python
 import numpy as np
 from matplotlib import pyplot as plt
 
-feature_map = visualizer.get_feature_maps(['block5_conv3'], ['giraffe.png'])
 plt.matshow(np.mean(feature_map[0, 0], axis=-1))
 plt.show()
 ```
@@ -176,6 +182,8 @@ max_activations = visualizer.get_max_activations('block3_conv1', [12, 123], 2)
 ```
 
 ```python
+from matplotlib import pyplot as plt
+
 plt.imshow(max_activation[0])
 plt.axis('off')
 plt.show()
@@ -184,6 +192,8 @@ plt.show()
 <img src="https://github.com/zhihanyang2022/pngs/blob/master/max_activation_1.png" alt="drawing" width="400"/>
 
 ```python
+from matplotlib import pyplot as plt
+
 plt.imshow(max_activation[1])
 plt.axis('off')
 plt.show()
@@ -200,6 +210,9 @@ kernels = visualizer.get_kernels('block2_conv1')
 ```
 
 ```python
+from matplotlib import pyplot as plt
+import numpy as np
+
 plt.matshow(np.mean(kernels[:, :, :, 1], axis=-1))
 plt.show()
 ```
