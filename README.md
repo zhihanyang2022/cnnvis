@@ -192,7 +192,7 @@ plt.axis('off')
 plt.show()
 ```
 
-<img src="https://i.loli.net/2020/11/21/5GpO3B1dc6lg9o8.png" alt="drawing" width="400"/>
+<img src="https://i.loli.net/2020/11/21/ZrQHL1oEPSnIDs7.png" alt="drawing" width="400"/>
 
 ```python
 from matplotlib import pyplot as plt
