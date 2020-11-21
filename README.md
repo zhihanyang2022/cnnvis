@@ -1,4 +1,4 @@
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/cnnvis_banner.png" alt="drawing">
+<img src="https://i.loli.net/2020/11/21/cbltiD4EXY1eQdy.png" alt="drawing">
 
 ## Welcome
 
@@ -116,13 +116,13 @@ plt.imshow(saliency_maps[2])
 plt.show()
 ```
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/saliency_maps.png" alt="drawing" width="500"/>
+<img src="https://i.loli.net/2020/11/21/RQUGPnT7XxNkWa9.png" alt="drawing" width="500"/>
 
 ### Plot feature map
 
 To plot the feature map of a specific layer to a specific image (e.g. giraffe):
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/giraffe.jpeg" alt="drawing" width="400"/>
+<img src="https://i.loli.net/2020/11/21/WorY5tJ78OLsBuK.jpg" alt="drawing" width="400"/>
 
 ```python
 feature_map = visualizer.get_feature_maps(['block5_conv3'], ['giraffe.png'])
@@ -135,7 +135,7 @@ from matplotlib import pyplot as plt
 plt.matshow(np.mean(feature_map[0, 0], axis=-1))
 plt.show()
 ```
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/feature_map_giraffe.png" alt="drawing" width="200"/>
+<img src="https://i.loli.net/2020/11/21/afu6hvsNoYwxb9C.png" alt="drawing" width="200"/>
 
 ### Plot mean activations
 
@@ -160,7 +160,7 @@ plt.legend()
 plt.show()
 ```
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/mean_activations_1.png" alt="drawing" width="400"/>
+<img src="https://i.loli.net/2020/11/21/f729zOmErAFK6gs.png" alt="drawing" width="400"/>
 
 ```python
 from matplotlib import pyplot as plt
@@ -174,7 +174,7 @@ plt.legend()
 plt.show()
 ```
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/mean_activations_2.png" alt="drawing" width="400"/>
+<img src="https://i.loli.net/2020/11/21/5GpO3B1dc6lg9o8.png" alt="drawing" width="400"/>
 
 ### Plot max activation
 
@@ -192,7 +192,7 @@ plt.axis('off')
 plt.show()
 ```
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/max_activation_1.png" alt="drawing" width="400"/>
+<img src="https://i.loli.net/2020/11/21/5GpO3B1dc6lg9o8.png" alt="drawing" width="400"/>
 
 ```python
 from matplotlib import pyplot as plt
@@ -202,7 +202,7 @@ plt.axis('off')
 plt.show()
 ```
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/max_activation_2.png" alt="drawing" width="400"/>
+<img src="https://i.loli.net/2020/11/21/ZrQHL1oEPSnIDs7.png" alt="drawing" width="400"/>
 
 ### Plot kernel
 
@@ -220,7 +220,7 @@ plt.matshow(np.mean(kernels[:, :, :, 1], axis=-1))
 plt.show()
 ```
 
-<img src="https://github.com/zhihanyang2022/pngs/blob/master/kernel.png" alt="drawing" width="300"/>
+<img src="https://i.loli.net/2020/11/21/cAZ9dFSK4wn8Plq.png" alt="drawing" width="300"/>
 
 
 
