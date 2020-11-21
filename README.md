@@ -202,7 +202,7 @@ plt.axis('off')
 plt.show()
 ```
 
-<img src="https://i.loli.net/2020/11/21/ZrQHL1oEPSnIDs7.png" alt="drawing" width="400"/>
+<img src="https://i.loli.net/2020/11/21/Cqs1GM6ZalvgWNJ.png" alt="drawing" width="400"/>
 
 ### Plot kernel
 
